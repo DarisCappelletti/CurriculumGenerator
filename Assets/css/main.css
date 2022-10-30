@@ -1,0 +1,213 @@
+* {
+    box-sizing:border-box;
+  }
+  
+  html {
+      height: 100%;
+  }
+  body {
+      /* Dimensioni di un foglio A4 */
+      height: 1188px;
+      width: 840px;
+      margin: 0;
+  }
+  
+  /* FONT */
+  h1 { 
+      font-family: Georgia, Times, "Times New Roman", serif; 
+      font-size: 24px; 
+      font-style: normal; 
+      font-variant: normal; 
+      font-weight: 700; 
+      line-height: 26.4px; 
+  } 
+  
+  h3 { font-family: Georgia, Times, "Times New Roman", serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
+  p { font-family: Georgia, Times, "Times New Roman", serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+  blockquote { font-family: Georgia, Times, "Times New Roman", serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+  pre { font-family: Georgia, Times, "Times New Roman", serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+  
+  
+  
+  /* ALTRO */
+  
+  .container {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 30px;
+    height: 100%;
+  }
+  
+  .column-img {
+      padding-top: 0;
+  }
+  
+  .left {
+    width: 40%;
+  }
+  
+  .right {
+    width: 60%;
+  }
+  
+  .row {
+      height: 100%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .header {
+      height: 22%;
+  }
+  
+  .contenuto {
+      height: 78%;
+  }
+  
+  .w-100 {
+      width: 100% !important;
+  }
+  
+  .w-90 {
+      width: 90% !important;
+  }
+  
+  .w-75 {
+      width: 75% !important;
+  }
+  
+  .w-70 {
+      width: 75% !important;
+  }
+  
+  .w-60 {
+      width: 60% !important;
+  }
+  
+  .w-50 {
+      width: 50% !important;
+  }
+  
+  .w-40 {
+      width: 40% !important;
+  }
+  
+  .w-30 {
+      width: 30% !important;
+  }
+  
+  .w-25 {
+      width: 25% !important;
+  }
+  
+  .w-10 {
+      width: 10% !important;
+  }
+  
+  .h-100 {
+      height: 100% !important;
+  }
+  
+  .h-75 {
+      height: 75% !important;
+  }
+  
+  .h-50 {
+      height: 50% !important;
+  }
+  
+  .h-25 {
+      height: 25% !important;
+  }
+  
+  .text-white {
+      color: white;
+  }
+  
+  .text-secondary {
+      color: #2e4a53;
+  }
+  
+  .text-center {
+      text-align: center !important;
+  }
+  
+  .img-personale {
+      top: 0;
+      padding-top: 0;
+      margin-top: 0;
+      border: 1px solid black;
+  }
+  
+  .riga-img {
+      border-bottom: 5px solid #c8ccd1; 
+      position: absolute;
+      width: 40%;
+      z-index: 0;
+  }
+  
+  .p-0 {
+      padding: 0 !important;
+  }
+  
+  .m-0 {
+      margin: 0 !important;
+  }
+  
+  .m-auto {
+      margin: auto !important;
+  }
+  
+  .sub {
+      margin-top: 6px;
+  }
+  
+  .float-start{
+      float: left !important;
+  }
+  
+  .float-end {
+      float: right !important;
+  }
+  
+  .text-right {
+      text-align: right !important;
+  }
+  
+  .text-left {
+      text-align: left !important;
+  }
+  
+  .text-justify {
+      text-align: justify !important;
+  }
+  
+  .border-left {
+      border-left: 2px solid #2e4a53;
+  }
+  
+  .border-bottom {
+      border-bottom: 1px solid #2e4a53;
+  }
+  
+  .link {
+      color: #2e4a53;
+  }
+  
+  .footer{
+      position: absolute;
+      bottom: 0;
+      right: 6px;
+  }

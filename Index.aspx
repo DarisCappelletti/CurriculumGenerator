@@ -1,5 +1,6 @@
 ﻿<%@ Page
     Language="C#"
+    Title="Generatore curriculum"
     AutoEventWireup="true"
     CodeBehind="Index.aspx.cs"
     MasterPageFile="~/Site.Master"
@@ -10,6 +11,15 @@
         <div>
             <h1>Generatore curriculum</h1>
             <h2>Tool per la generazione automatica di un curriculum con un template preimpostato.</h2>
+        </div>
+
+        <div>
+            <label>Recupera le informazioni da un vecchio file cv (creato su questa pagina)</label>
+            <asp:FileUpload ID="fileRecuperaCV" runat="server" CssClass="form-control" />
+        </div>
+        <div>
+            <label>Carica un'immagine da impostare sul profilo</label>
+            <asp:FileUpload ID="fileImmagine" runat="server" CssClass="form-control" />
         </div>
 
         <div class="accordion" id="accordionFormCurriculum">

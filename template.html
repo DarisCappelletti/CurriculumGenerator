@@ -4,12 +4,260 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Css -->
-    <link rel="stylesheet" href="Assets/css/main.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    <!-- Fontawesome -->
-    <script src="Assets/vendor/fontawesome-free-6.2.0-web/js/brands.js"></script>
-    <script defer src="Assets/vendor/fontawesome-free-6.2.0-web/js/solid.js"></script>
-    <script defer src="Assets/vendor/fontawesome-free-6.2.0-web/js/fontawesome.min.js"></script>
+        html {
+            height: 100%;
+        }
+
+        body {
+            /* Dimensioni di un foglio A4 */
+            height: 1188px;
+            width: 840px;
+            margin: 0;
+        }
+
+        /* FONT */
+        h1 {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 26.4px;
+        }
+
+        h3 {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 15.4px;
+        }
+
+        p {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        blockquote {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 21px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        pre {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 13px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 18.5714px;
+        }
+
+
+
+        /* ALTRO */
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .column-img {
+            padding-top: 0;
+        }
+
+        .left {
+            width: 40%;
+        }
+
+        .right {
+            width: 60%;
+        }
+
+        .row {
+            height: 100%;
+        }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        .header {
+            height: 22%;
+        }
+
+        .contenuto {
+            height: 78%;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .w-90 {
+            width: 90% !important;
+        }
+
+        .w-75 {
+            width: 75% !important;
+        }
+
+        .w-70 {
+            width: 75% !important;
+        }
+
+        .w-60 {
+            width: 60% !important;
+        }
+
+        .w-50 {
+            width: 50% !important;
+        }
+
+        .w-40 {
+            width: 40% !important;
+        }
+
+        .w-30 {
+            width: 30% !important;
+        }
+
+        .w-25 {
+            width: 25% !important;
+        }
+
+        .w-10 {
+            width: 10% !important;
+        }
+
+        .h-100 {
+            height: 100% !important;
+        }
+
+        .h-75 {
+            height: 75% !important;
+        }
+
+        .h-50 {
+            height: 50% !important;
+        }
+
+        .h-25 {
+            height: 25% !important;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-secondary {
+            color: #2e4a53;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .img-personale {
+            position: relative;
+            top: 0;
+            padding-top: 0;
+            margin-top: 0;
+            border: 1px solid black;
+            z-index: 1;
+        }
+
+        .riga-img {
+            border-bottom: 5px solid #c8ccd1;
+            position: absolute;
+            width: 40%;
+            z-index: 0;
+        }
+
+        .p-0 {
+            padding: 0 !important;
+        }
+
+        .m-0 {
+            margin: 0 !important;
+        }
+
+        .m-auto {
+            margin: auto !important;
+        }
+
+        .sub {
+            margin-top: 6px;
+        }
+
+        .float-start {
+            float: left !important;
+        }
+
+        .float-end {
+            float: right !important;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .text-justify {
+            text-align: justify !important;
+        }
+
+        .border-left {
+            border-left: 2px solid #2e4a53;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #2e4a53;
+        }
+
+        .link {
+            color: #2e4a53;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            right: 6px;
+        }
+
+        .icona-width {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,16 +266,15 @@
                 <p class="riga-img" style="top: 15px;"></p>
                 <p class="riga-img" style="top: 30px;"></p>
                 <p class="riga-img" style="top: 45px;"></p>
-                <div class="column left column-img text-center" 
-                style="background-color: #eef2f5;">
+                <div class="column left column-img text-center"
+                     style="background-color: #eef2f5;">
 
-                <!-- Immagine personale -->
-                  <img 
-                  style="filter: saturate(0.5);"
-                  src="C:\ProgettiPersonali\PortFolio\PortFolio\lib\Images\profile_picture.jpg"
-                    width="200" 
-                    height="auto" 
-                    class="img-personale" />
+                    <!-- Immagine personale -->
+                    <img style="filter: saturate(0.5);"
+                         width="200"
+                         alt="Immagine personale"
+                         class="img-personale"
+                         src="data:image/png;base64, {{ImgBase64}}" />
                 </div>
                 <div class="column right text-white" 
                 style="background-color:#2e4a53;">
@@ -43,8 +290,8 @@
                     <h2 class="m-auto">{{Professione}}</h2>
                     <hr style="border-bottom: 1px solid white">
                     <p>
-                        <strong>Età:</strong> {{Eta}} ||
-                        <strong>Nazionalità:</strong> {{Nazionalita}} ||
+                        <strong>Et&agrave;:</strong> {{Eta}} ||
+                    <strong>Nazionalit&agrave;:</strong> {{Nazionalita}} ||
                         <strong>Lingua:</strong> {{Lingua}}
                     </p>
                 </div>
@@ -60,7 +307,8 @@
                         <!-- Telefono -->
                         <div class="row">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-phone"></i>
+                                <!-- icona telefono -->
+                                <svg class="svg-inline--fa fa-phone icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">Telefono</h3>
@@ -74,7 +322,8 @@
                         <!-- Email -->
                         <div class="row">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-envelope"></i>
+                                <!-- icona email-->
+                                <svg class="svg-inline--fa fa-envelope icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">Email</h3>
@@ -88,7 +337,8 @@
                         <!-- Indirizzo -->
                         <div class="row">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-map-location-dot"></i>
+                                <!-- icona indirizzo -->
+                                <svg class="svg-inline--fa fa-map-location-dot icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-location-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">Indirizzo</h3>
@@ -99,7 +349,8 @@
                         <!-- Sito web -->
                         <div class="row">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-earth-europe"></i>
+                                <!-- icona sito web -->
+                                <svg class="svg-inline--fa fa-earth-europe icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="earth-europe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1v9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1h1c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24v4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6H400c8.8 0 16 7.2 16 16s-7.2 16-16 16H379.3c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3h11.3c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16H454c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.6-15.4H251.4c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3v3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3H248c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">Sito web</h3>
@@ -117,7 +368,8 @@
                         <!-- Percorso 1 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Percorso1}}</h3>
@@ -127,7 +379,8 @@
                         <!-- Percorso 2 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Percorso2}}</h3>
@@ -141,7 +394,8 @@
                         <!-- Skill 1 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-1}}</h3>
@@ -150,7 +404,8 @@
                         <!-- Skill 2 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-2}}</h3>
@@ -159,7 +414,8 @@
                         <!-- Skill 3 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-3}}</h3>
@@ -168,7 +424,8 @@
                         <!-- Skill 4 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-4}}</h3>
@@ -177,7 +434,8 @@
                         <!-- Skill 5 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-5}}</h3>
@@ -186,7 +444,8 @@
                         <!-- Skill 6 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-6}}</h3>
@@ -195,7 +454,8 @@
                         <!-- Skill 7 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-7}}</h3>
@@ -204,7 +464,8 @@
                         <!-- Skill 8 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-8}}</h3>
@@ -213,7 +474,8 @@
                         <!-- Skill 9 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-9}}</h3>
@@ -222,7 +484,8 @@
                         <!-- Skill 10 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-10}}</h3>
@@ -231,7 +494,8 @@
                         <!-- Skill 11 -->
                         <div class="row border-left">
                             <div class="column w-10 p-0">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <!-- icona arrow-->
+                                <svg class="svg-inline--fa fa-arrow-right-long icona-width" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg>
                             </div>
                             <div class="column w-90 p-0">
                                 <h3 class="m-0">{{Skill-11}}</h3>

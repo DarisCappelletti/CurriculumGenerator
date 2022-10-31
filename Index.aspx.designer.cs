@@ -15,6 +15,24 @@ namespace PortFolio.CurriculumGenerator
     {
 
         /// <summary>
+        /// Controllo fileRecuperaCV.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileRecuperaCV;
+
+        /// <summary>
+        /// Controllo fileImmagine.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileImmagine;
+
+        /// <summary>
         /// Controllo txtNome.
         /// </summary>
         /// <remarks>

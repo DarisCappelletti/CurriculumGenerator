@@ -1,0 +1,15 @@
+# Build .NET
+bin/
+obj/
+*.user
+
+# Node / React
+node_modules/
+curriculum-generator-ui/dist/
+curriculum-generator-ui/tsconfig.tsbuildinfo
+npm-debug.log*
+
+# IDE
+.vs/
+.vscode/
+.idea/
